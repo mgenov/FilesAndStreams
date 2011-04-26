@@ -1,7 +1,7 @@
 package directorbrowser;
 
 /**
- * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 3:25 PM
+ * @author Adelin Ghanayem (Adio@evo.bg)
  */
 public class Main {
     public static void main(String args[]) {

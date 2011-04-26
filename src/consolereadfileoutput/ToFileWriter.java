@@ -6,35 +6,27 @@ import java.util.Scanner;
 
 /**
  * Creates a text file , scans users input and writes(outputs) users input to the file . If file exists, opens the file
- * and writes users input to it . existing file name Created by IntelliJ IDEA. User: adio Date: 4/4/11 Time: 3:03 AM
+ * and writes users input to it
+ * @author Adelin Ghanayem (Adio@evo.bg)
  */
 public class ToFileWriter {
 
-    //FileWriter creates or open file and writes to the file ;
-    private FileWriter writer;
+    private FileWriter writer = null;
 
-    /**
-     * Creates e new FileWriter object
-     *
-     * @param fileName the file name to open if exists or create otherwise
-     */
-    public ToFileWriter(String fileName) {
 
-        try {
-            writer = new FileWriter(fileName);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public ToFileWriter() {
     }
 
     /**
-     * Creates new Scanner object , Scans users input and writes the input to the file created by the constructor.
+     * Writes users input provided by scanner to text file. writing stops when use enter a (dot) in new line !
      *
+     * @param userInput Scanner witch provides users input
+     * @param fileName  the name of the file in witch the function will write
      * @throws IOException .
      */
-    public void writeToFile() {
-        Scanner userInput = new Scanner(System.in);
+    public void writeToFile(Scanner userInput, String fileName) {
         try {
+            this.writer = new FileWriter(fileName);
             while (!userInput.hasNext(".")) {
                 writer.write(userInput.next());
             }

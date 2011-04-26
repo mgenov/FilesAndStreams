@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.InputMismatchException;
 
-/** Reads and return users input . Created by IntelliJ IDEA. User: adio Date: 4/5/11 Time: 4:12 PM */
+/** Reads users input .
+ * @author  Adelin Ghanayem (Adio@evo.bg)
+ */
 public class ConsoleReader {
 
     private BufferedReader bufReader = null;

@@ -3,7 +3,8 @@ package dataserialization;
 import java.io.Serializable;
 
 /**
- * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:35 PM .
+ * Provides an employee information
+ * @author Adelin Ghanayem (Adio@evo.bg)
  */
 public class Employee implements Serializable {
 

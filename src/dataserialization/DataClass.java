@@ -3,7 +3,9 @@ package dataserialization;
 import java.io.*;
 
 /**
- * Serializes object . Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:53 PM .
+ * Serializes object
+ *
+ * @author Adelin Ghanayem (Adio@evo.bg)
  */
 public class DataClass {
 
@@ -12,7 +14,6 @@ public class DataClass {
      *
      * @param outputStream an output stream to witch saves the objects
      * @param object       the object to be saved
-     * @return
      */
     public void saveObject(OutputStream outputStream, Object object) {
 
@@ -21,8 +22,6 @@ public class DataClass {
             //OutputStream must be wrapped by ObjectOutputStream
             ObjectOutputStream objectOutput = new ObjectOutputStream(outputStream);
             objectOutput.writeObject(object);
-
-
         } catch (IOException e) {
             e.printStackTrace();
 
@@ -31,6 +30,11 @@ public class DataClass {
 
     }
 
+    /**
+     * Retrieves Objects from an input stream (deserializes objects )
+     * @param inputStream the input from witch to read the object
+     * @return the object been read
+     */
     public Object getObject(InputStream inputStream) {
 
         try {

@@ -4,7 +4,9 @@ import java.io.*;
 
 /**
  * Reads the content of text file ,saves the content in the buffer , reverse the buffer content and saves the text file
- * back. Created by IntelliJ IDEA. User: adio Date: 4/5/11 Time: 5:14 PM .
+ * back.
+ *
+ * @author Adelin Ghanayem (Adio@evo.bg)
  */
 public class FileReverser {
     //private String fileName;
@@ -15,18 +17,13 @@ public class FileReverser {
     //bufWriter Writes to buffer ;
     private BufferedWriter bufWriter = null;
 
-    /**
-     * Creates new FileReverser by providing path to the source file from witch data will be loaded  .
-     *
-     * @throws IOException
-     */
     public FileReverser() {
-
     }
 
 
     /**
-     * Reverse a given array as a parameter
+     * Reverse a given array as a parameter and reverse it
+     *
      * @param charsArray the array to be reversed
      */
     private void inverseArray(char[] charsArray) {
@@ -45,6 +42,7 @@ public class FileReverser {
 
     /**
      * Reverse the content of file containing chars provided by it's name
+     *
      * @param fileName, the name of the file to be reversed
      * @return return 0 at success , -1 at IOException, 1  if the given file name doesn't exists
      */

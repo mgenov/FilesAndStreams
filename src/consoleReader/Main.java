@@ -1,6 +1,6 @@
 package consolereader;
 
-/** Created by IntelliJ IDEA. User: adio Date: 4/5/11 Time: 4:11 PM */
+/** @author Adelin Ghanayem (Adio@evo.bg)  */
 public class Main {
     public static void main(String args[]) {
         ConsoleReader reader = new ConsoleReader();

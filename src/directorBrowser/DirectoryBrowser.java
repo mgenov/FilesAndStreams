@@ -3,8 +3,9 @@ package directorbrowser;
 import java.io.File;
 
 /**
- * Check a given String whether its a file path or directory path Created by IntelliJ IDEA. User: adio Date: 4/6/11
- * Time: 3:26 PM
+ * Check a given String whether its a file path or directory path
+ *
+ * @author Adelin Ghanayem (Adio@evo.bg)
  */
 public class DirectoryBrowser {
 
@@ -18,7 +19,7 @@ public class DirectoryBrowser {
      * check path whether it's file or directory , prints a message if path is file , prints directory content
      * otherwise
      *
-     * @param path
+     * @param path the path of the file or directory
      */
 
     public void listContent(String path) {
