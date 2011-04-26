@@ -1,15 +1,20 @@
-package consoleReader;
+package consolereader;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
-/**
- * Reads and return users input . Created by IntelliJ IDEA. User: adio Date: 4/5/11 Time: 4:12 PM To change this
- * template use File | Settings | File Templates.
- */
+/** Reads and return users input . Created by IntelliJ IDEA. User: adio Date: 4/5/11 Time: 4:12 PM */
 public class ConsoleReader {
-    //object Scanner , scans users input .
-    private Scanner input = new Scanner(System.in);
+
+    private BufferedReader bufReader = null;
+
+    public ConsoleReader() {
+        //Reads the users input from the console.
+        this.bufReader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
 
     /**
      * Returns String values returned by Scanner object ;
@@ -17,7 +22,17 @@ public class ConsoleReader {
      * @return users String input;
      */
     public String readString() {
-        return this.input.next();
+
+        try {
+            return this.bufReader.readLine();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            //indicates Error occurrence .
+            return "IOError";
+        }
+
+
     }
 
     /**
@@ -28,8 +43,17 @@ public class ConsoleReader {
      */
 
     public int readInt() {
-        return this.input.nextInt();
-
+        String userInput = null;
+        int returnedInteger = 0;
+        try {
+            userInput = bufReader.readLine();
+            returnedInteger = Integer.parseInt(userInput);
+            return returnedInteger;
+        } catch (IOException e) {
+            e.printStackTrace();
+            //indicates error occurrence .
+            return 0;
+        }
     }
 
     /**
@@ -38,16 +62,37 @@ public class ConsoleReader {
      * @return users char input ;
      */
     public char readChar() {
-        String inputString = this.input.next();
-        return inputString.charAt(0);
+        String userInput = null;
+        try {
+            userInput = this.bufReader.readLine();
+            char returnedChar = userInput.charAt(0);
+            return returnedChar;
+        } catch (IOException e) {
+            e.printStackTrace();
+            //returns null value at Exception occurrence .
+            return userInput.charAt(0);
+
+        }
+
     }
 
     /**
      * Returns float values returned by Scanner object ;
+     *
      * @return
      * @throws InputMismatchException
      */
     public float readFloat() {
-        return this.input.nextFloat();
+        String userInput;
+        float returnedFloat = 0;
+        try {
+            userInput = this.bufReader.readLine();
+            returnedFloat = Float.parseFloat(userInput);
+            return returnedFloat;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return returnedFloat;
+        }
+
     }
 }

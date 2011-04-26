@@ -1,10 +1,9 @@
-package test;
+package dataserialization;
 
 import java.io.Serializable;
 
 /**
- * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:35 PM To change this template use File | Settings | File
- * Templates.
+ * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:35 PM .
  */
 public class Employee implements Serializable {
 

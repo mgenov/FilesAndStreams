@@ -1,10 +1,9 @@
-package test;
+package dataserialization;
 
 import java.io.*;
 
 /**
- * Serializes object . Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:53 PM To change this template use File
- * | Settings | File Templates.
+ * Serializes object . Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:53 PM .
  */
 public class DataClass {
 

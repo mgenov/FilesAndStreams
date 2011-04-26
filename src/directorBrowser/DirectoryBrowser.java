@@ -1,10 +1,10 @@
-package directorBrowser;
+package directorbrowser;
 
 import java.io.File;
 
 /**
  * Check a given String whether its a file path or directory path Created by IntelliJ IDEA. User: adio Date: 4/6/11
- * Time: 3:26 PM To change this template use File | Settings | File Templates.
+ * Time: 3:26 PM
  */
 public class DirectoryBrowser {
 

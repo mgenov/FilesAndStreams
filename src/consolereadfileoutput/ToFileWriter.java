@@ -1,4 +1,4 @@
-package consoleReadFileOutput;
+package consolereadfileoutput;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -6,10 +6,9 @@ import java.util.Scanner;
 
 /**
  * Creates a text file , scans users input and writes(outputs) users input to the file . If file exists, opens the file
- * and writes users input to it . existing file name Created by IntelliJ IDEA. User: adio Date: 4/4/11 Time: 3:03 AM To
- * change this template use File | Settings | File
+ * and writes users input to it . existing file name Created by IntelliJ IDEA. User: adio Date: 4/4/11 Time: 3:03 AM
  */
-public class WriteToFile {
+public class ToFileWriter {
 
     //FileWriter creates or open file and writes to the file ;
     private FileWriter writer;
@@ -19,7 +18,7 @@ public class WriteToFile {
      *
      * @param fileName the file name to open if exists or create otherwise
      */
-    public WriteToFile(String fileName) {
+    public ToFileWriter(String fileName) {
 
         try {
             writer = new FileWriter(fileName);
@@ -35,37 +34,25 @@ public class WriteToFile {
      */
     public void writeToFile() {
         Scanner userInput = new Scanner(System.in);
-        while (!userInput.hasNext(".")) {
-            try {
+        try {
+            while (!userInput.hasNext(".")) {
                 writer.write(userInput.next());
-            } catch (IOException e) {
-                e.printStackTrace();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (this.writer != null) {
+                try {
+                    this.writer.close();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+
+                }
             }
         }
 
 
     }
 
-    /**
-     * Check the output stream and closes it if still open .
-     *
-     * @throws IOException .
-     */
-    public void closeStream() {
-
-        if (writer != null) {
-            try {
-                writer.close();
-
-            } catch (IOException e) {
-
-                e.printStackTrace();
-
-
-            }
-
-
-        }
-    }
 
 }

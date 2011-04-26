@@ -1,1 +1,1 @@
-bufferedWriter = new BufferedWriter(new FileWriter(filename));
+.ssalc siht fo sdohtem eht tnemelpmi ,syarra gnidulcni ,stcejbo llA .ssalcrepus a sa tcejbO sah ssalc yrevE .yhcrareih ssalc eht fo toor eht si tcejbO ssalC

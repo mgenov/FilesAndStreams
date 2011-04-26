@@ -1,8 +1,7 @@
-package directorBrowser;
+package directorbrowser;
 
 /**
- * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 3:25 PM To change this template use File | Settings | File
- * Templates.
+ * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 3:25 PM
  */
 public class Main {
     public static void main(String args[]) {

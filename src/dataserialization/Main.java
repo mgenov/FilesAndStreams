@@ -1,12 +1,11 @@
-package test;
+package dataserialization;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**Writes a Random Object to specific path and the reads it !
- * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:34 PM To change this template use File | Settings | File
- * Templates.
+ * Created by IntelliJ IDEA. User: adio Date: 4/6/11 Time: 6:34 PM .
  */
 public class Main {
 
