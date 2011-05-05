@@ -24,8 +24,6 @@ public class Employee implements Serializable {
     public Employee(){
         this("Adio","Gemon",1234,(float)123.8);
     }
-
-
     public void setFirstName(String fname) {
         this.firstName = fname;
 

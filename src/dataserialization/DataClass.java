@@ -10,7 +10,7 @@ import java.io.*;
 public class DataClass {
 
     /**
-     * Saves Objects to a specific output stream
+     * Saves Objects to a specific output stream , using java standard serialization !
      *
      * @param outputStream an output stream to witch saves the objects
      * @param object       the object to be saved
@@ -33,7 +33,7 @@ public class DataClass {
     /**
      * Retrieves Objects from an input stream (deserializes objects )
      * @param inputStream the input from witch to read the object
-     * @return the object been read
+     * @return the object been read, -1 at IOException , 1 at ClassNotFoundException ( when the application can't find the specified class ) .
      */
     public Object getObject(InputStream inputStream) {
 
@@ -46,7 +46,7 @@ public class DataClass {
             return -1;
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return -1;
+            return 1;
 
         }
 

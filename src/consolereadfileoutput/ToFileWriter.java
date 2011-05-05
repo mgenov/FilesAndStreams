@@ -14,21 +14,25 @@ public class ToFileWriter {
     private FileWriter writer = null;
 
 
+
     public ToFileWriter() {
     }
 
     /**
      * Writes users input provided by scanner to text file. writing stops when use enter a (dot) in new line !
      *
-     * @param userInput Scanner witch provides users input
+     * @param inputStream Scanner witch provides users input
      * @param fileName  the name of the file in witch the function will write
      * @throws IOException .
      */
-    public void writeToFile(Scanner userInput, String fileName) {
+    public void writeToFile(Scanner inputStream, String fileName) {
+
         try {
+
+
             this.writer = new FileWriter(fileName);
-            while (!userInput.hasNext(".")) {
-                writer.write(userInput.next());
+            while (!inputStream.hasNext(".") || inputStream.hasNext()) {
+                writer.write(inputStream.next());
             }
         } catch (IOException e) {
             e.printStackTrace();
