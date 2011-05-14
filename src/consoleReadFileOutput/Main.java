@@ -1,11 +1,9 @@
 package consolereadfileoutput;
 
-import java.util.Scanner;
-
 /** Created by  Adelin Ghanayem (Adio@evo.bg) */
 public class Main {
     public static void main(String args[]) {
-        //scans the users input .
+       /* //scans the users input .
         Scanner input = new Scanner(System.in);
         System.out.println("Enter file name:");
         //create new ToFileWriter
@@ -14,6 +12,6 @@ public class Main {
         System.out.println("[ To terminate the program void (.) ]\nEnter you text:");
         writer.writeToFile(input,"Adio.txt");
 
-
+               */
     }
 }

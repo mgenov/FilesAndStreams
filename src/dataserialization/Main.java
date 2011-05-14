@@ -18,18 +18,16 @@ public class Main {
             objectSerialize.saveObject(fileOutput, employee1);
             FileInputStream fileInput = new FileInputStream("Employee.ser");
             //casting the returned object by getObject to Employee object
-
             Employee employee = (Employee) objectSerialize.getObject(fileInput);
             //prints the first name of Employee !
             System.out.println(employee.getFirstName());
+
         } catch (IOException ioException) {
             ioException.printStackTrace();
 
         }
-        catch(ClassNotFoundException e){
-            e.printStackTrace();
 
-        }
+
 
 
     }

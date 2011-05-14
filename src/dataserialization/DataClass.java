@@ -33,24 +33,20 @@ public class DataClass {
     /**
      * Retrieves Objects from an input stream (deserializes objects )
      * @param inputStream the input from witch to read the object
-     * @return the object been read
-     * @throws  IOException , if an exception occurred when an I/O error occurs while reading stream header
-     * @throws ClassNotFoundException , when the Class of a serialized object cannot be found
+     * @return an instance of Employee object, new Integer(1) object if an error occurred  during opening stream or read from stream
+     * new Integer(-1) if class not found
      */
-    public Object getObject(InputStream inputStream) throws IOException,ClassNotFoundException {
+    public Object getObject(InputStream inputStream)  {
 
         try {
             ObjectInputStream objectInput = new ObjectInputStream(inputStream);
-
-            return objectInput.readObject();
-
+            return (Employee) objectInput.readObject();
         } catch (IOException ioException) {
             ioException.printStackTrace();
-            throw new IOException() ;
+            return new Integer(1);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            throw new ClassNotFoundException();
-
+            return new Integer(-1);
         }
 
 
