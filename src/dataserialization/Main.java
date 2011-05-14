@@ -21,10 +21,11 @@ public class Main {
             Employee employee = (Employee) objectSerialize.getObject(fileInput);
             //prints the first name of Employee !
             System.out.println(employee.getFirstName());
-
         } catch (IOException ioException) {
             ioException.printStackTrace();
 
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
 
 

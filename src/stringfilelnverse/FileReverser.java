@@ -46,7 +46,7 @@ public class FileReverser {
      * @param fileName, the name of the file to be reversed
      * @return return 0 at success , -1 at IOException, 1  if the given file name doesn't exists
      */
-    public int fileReverse(String fileName) {
+    public int fileReverse(String fileName) throws IOException{
         this.fileInfo = new File(fileName);
         if (this.fileInfo.exists()) {
             char charArray[] = new char[(int) this.fileInfo.length()];
@@ -58,16 +58,12 @@ public class FileReverser {
                 this.bufWriter = new BufferedWriter(new FileWriter(fileName));
                 this.bufWriter.write(charArray);
                 return 0;
-            } catch (IOException e) {
-                e.printStackTrace();
-                return -1;
-            } finally {
+            }  finally {
                 try {
                     this.bufReader.close();
-                    this.bufWriter.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
 
+                } finally {
+                     this.bufWriter.close();
                 }
             }
 

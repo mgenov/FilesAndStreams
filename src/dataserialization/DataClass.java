@@ -36,17 +36,13 @@ public class DataClass {
      * @return an instance of Employee object, new Integer(1) object if an error occurred  during opening stream or read from stream
      * new Integer(-1) if class not found
      */
-    public Object getObject(InputStream inputStream)  {
-
+    public Object getObject(InputStream inputStream) throws IOException ,ClassNotFoundException {
+        ObjectInputStream objectInput = null;
         try {
-            ObjectInputStream objectInput = new ObjectInputStream(inputStream);
-            return (Employee) objectInput.readObject();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-            return new Integer(1);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return new Integer(-1);
+            objectInput = new ObjectInputStream(inputStream);
+            return objectInput.readObject();
+        } finally {
+            objectInput.close();
         }
 
 

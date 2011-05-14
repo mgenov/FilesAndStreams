@@ -25,18 +25,15 @@ public class ToFileWriter {
      * @param fileName  the name of the file in witch the function will write
      * @throws IOException .
      */
-    public void writeToFile(Scanner inputStream, String fileName) {
+    public void writeToFile(Scanner inputStream, String fileName) throws IOException{
 
         try {
-
-
             this.writer = new FileWriter(fileName);
             while (!inputStream.hasNext(".") || inputStream.hasNext()) {
                 writer.write(inputStream.next());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
+        }
+        finally {
             if (this.writer != null) {
                 try {
                     this.writer.close();
